@@ -1,0 +1,42 @@
+.samurai-icon {
+  margin-top: 5vh;
+}
+
+.sub-title {
+  width: 50%;
+  text-align: center;
+}
+
+.menu-card {
+  max-width: 250px;
+  box-shadow: var(--global-box-shadow);
+
+  h2,
+  p {
+    text-align: center;
+  }
+}
+
+.balance-header-image {
+  background-image: url("../../assets/img/balance.svg");
+  background-size: cover;
+}
+
+.supply-header-image {
+  background-image: url("../../assets/img/supply.svg");
+  background-size: cover;
+}
+
+.pro-tip {
+  margin-top: 5vh;
+  width: 50%;
+  text-align: center;
+}
+
+.mat-card-avatar {
+  border-radius: 0;
+}
+
+.menu-list {
+  // width: 50%;
+}

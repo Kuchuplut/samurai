@@ -1,0 +1,79 @@
+<div fxLayout="column" fxLayoutAlign="start stretch" fxLayoutGap="1em">
+  <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx">
+    <img
+      src="../../assets/img/menu.svg"
+      width="150"
+      alt=""
+      srcset=""
+      class="samurai-icon animate__animated animate__fadeIn"
+    />
+  </div>
+  <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx">
+    <h1
+      class="animate__animated animate__fadeInUp"
+      style="animation-delay: 200ms"
+    >
+      <strong> MENU </strong>
+    </h1>
+  </div>
+  <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx">
+    <h2
+      class="sub-title animate__animated animate__fadeIn"
+      style="animation-delay: 300ms"
+    >
+      Choose from our menu!
+    </h2>
+  </div>
+  <div
+    class="menu-list"
+    fxLayout="row"
+    fxLayoutAlign="center center"
+    fxLayoutGap="2em"
+  >
+    <ng-container *ngFor="let menu of menus; let i = index">
+      <mat-card
+        class="menu-card animate__animated animate__fadeInRight"
+        [ngStyle]="{ 'animation-delay': getMs(i) }"
+      >
+        <mat-card-content>
+          <div
+            fxLayout="column"
+            fxLayoutAlign="start stretch"
+            fxLayoutGap="gappx"
+          >
+            <div
+              fxLayout="row"
+              fxLayoutAlign="center center"
+              fxLayoutGap="gappx"
+            >
+              <img
+                src="../../assets/img/menu.svg"
+                width="100"
+                alt=""
+                srcset=""
+                class="samurai-icon"
+              />
+            </div>
+
+            <h2>
+              <strong> Test Something </strong>
+            </h2>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </mat-card-content>
+        <mat-card-actions align="end">
+          <button mat-button>LIKE</button>
+          <button mat-raised-button color="primary">CHOOSE</button>
+        </mat-card-actions>
+      </mat-card>
+    </ng-container>
+  </div>
+
+  <div fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="gappx">
+    <p class="pro-tip">
+      Lorem ipsum is placeholder text commonly used in the graphic, print, and
+      publishing industries for previewing layouts and visual mockups.
+    </p>
+  </div>
+</div>

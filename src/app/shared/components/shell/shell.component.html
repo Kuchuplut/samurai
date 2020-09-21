@@ -1,0 +1,63 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
+  <mat-sidenav-container class="example-sidenav-container">
+    <mat-sidenav
+      #snav
+      [mode]="mobileQuery.matches ? 'over' : 'side'"
+      [fixedInViewport]="mobileQuery.matches"
+      [ngStyle]="{
+        'margin-left': mobileQuery.matches
+          ? '0px !important'
+          : '230px !important'
+      }"
+    >
+      <div class="sidenav-content">
+        <mat-toolbar class="title-bar">
+          <span>BARTER SHOP</span>
+        </mat-toolbar>
+
+        <button color="primary" mat-raised-button>UNLOCK WALLET</button>
+        <mat-nav-list>
+          <mat-list-item *ngFor="let link of links">
+            <mat-icon matListIcon>folder</mat-icon>
+            <a matLine href="...">{{ link }}</a>
+          </mat-list-item>
+        </mat-nav-list>
+      </div>
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+      <mat-toolbar class="top-toolbar">
+        <button
+          *ngIf="mobileQuery.matches"
+          mat-icon-button
+          (click)="snav.toggle()"
+        >
+          <mat-icon>menu</mat-icon>
+        </button>
+        <img
+          src="../../../../assets/img/samurai.svg"
+          width="30"
+          alt=""
+          srcset=""
+        />
+        &nbsp;
+        <h1 class="title">$SAMURAI</h1>
+        <span class="spacer"></span>
+        <ng-container *ngFor="let link of links">
+          <button mat-button [routerLink]="link.path">
+            {{ link.viewValue }}
+          </button>
+        </ng-container>
+        <span class="spacer"></span>
+        <button mat-raised-button color="primary">
+          <mat-icon>lock_open</mat-icon>
+          UNLOCK WALLET
+        </button>
+      </mat-toolbar>
+      <ng-content></ng-content>
+      <mat-toolbar class="top-toolbar footer">
+        <span>FirstRow</span>
+      </mat-toolbar>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+</div>

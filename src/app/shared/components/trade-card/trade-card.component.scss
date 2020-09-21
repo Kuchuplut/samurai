@@ -1,0 +1,13 @@
+.example-card {
+  max-width: 300px;
+  border-radius: 10px;
+  margin: 8px;
+  &:hover {
+    box-shadow: var(--global-box-shadow);
+  }
+}
+
+.example-header-image {
+  background-image: url("https://material.angular.io/assets/img/examples/shiba1.jpg");
+  background-size: cover;
+}
